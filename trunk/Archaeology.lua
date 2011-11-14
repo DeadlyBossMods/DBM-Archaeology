@@ -76,7 +76,7 @@ do
 		if event == "ADDON_LOADED" and select(1, ...) == "DBM-Archaeology" then
 			self:RegisterEvent("CHAT_MSG_LOOT")
 			self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
---			self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+			self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 			-- Update settings of this Addon
 			settings = DBM_Archaeology_Settings
 			addDefaultOptions(settings, default_settings)
@@ -106,15 +106,17 @@ do
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav")
 				end
 			end
---[[		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
+		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
 			local spellName = select(2, ...)
-			if spellName == GetSpellInfo(91215) then--Puzzle box, currently i haven't found any good way to detect it's usage yet. :(
+			--"<2.5> [CAST_SUCCEEDED] Omegal:Possible Target<Jamie Crester>:player:Whisper::9:91756", -- [1]
+			--"<12.5> [MONSTER_WHISPER] CHAT_MSG_MONSTER_WHISPER#Do you dream while you sleep or is it an escape from the horrors of reality?#Puzzle Box of Yogg-Saron###Omegal##0#0##0#235##0#false", -- [3]
+			if spellName == GetSpellInfo(91756) then--Puzzle box, currently i haven't found any good way to detect it's usage yet. :(
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav", "Master")
 				else
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav")
 				end
-			end--]]
+			end
 		end
 	end)
 	mainframe:RegisterEvent("ADDON_LOADED")
