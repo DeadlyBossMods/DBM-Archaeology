@@ -8,27 +8,27 @@ local settings = default_settings
 local L = DBM_Archaeology_Translations
 
 local soundFiles = {
-	[0] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
-	[1] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
-	[2] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.wav",
-	[3] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.wav",
-	[4] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.wav",
-	[5] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.wav",
-	[6] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.wav",
-	[7] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.wav",
-	[8] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.wav",
-	[9] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.wav",
-	[10] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.wav",
-	[11] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.wav",
-	[12] = "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.wav",
-	[13] = "Sound\\Creature\\CThun\\CThunDeathIsClose.wav",
-	[14] = "Sound\\Creature\\CThun\\CThunYouAreAlready.wav",
-	[15] = "Sound\\Creature\\CThun\\CThunYouWillBetray.wav",
-	[16] = "Sound\\Creature\\CThun\\CThunYouWillDIe.wav",
-	[17] = "Sound\\Creature\\CThun\\CThunYourCourage.wav",
-	[18] = "Sound\\Creature\\CThun\\CThunYourFriends.wav",
-	[19] = "Sound\\Creature\\CThun\\YourHeartWill.wav",
-	[20] = "Sound\\Creature\\CThun\\YouAreWeak.wav"
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.wav",
+	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.wav",
+	"Sound\\Creature\\CThun\\CThunDeathIsClose.wav",
+	"Sound\\Creature\\CThun\\CThunYouAreAlready.wav",
+	"Sound\\Creature\\CThun\\CThunYouWillBetray.wav",
+	"Sound\\Creature\\CThun\\CThunYouWillDIe.wav",
+	"Sound\\Creature\\CThun\\CThunYourCourage.wav",
+	"Sound\\Creature\\CThun\\CThunYourFriends.wav",
+	"Sound\\Creature\\CThun\\YourHeartWill.wav",
+	"Sound\\Creature\\CThun\\YouAreWeak.wav"
 }
 
 -- functions
@@ -85,7 +85,7 @@ do
 			local lootmsg = select(1, ...)
 			local player, itemID = lootmsg:match(L.DBM_LOOT_MSG)
 			if player and itemID and (tonumber(itemID) == 52843 or tonumber(itemID) == 63127 or tonumber(itemID) == 63128 or tonumber(itemID) == 64392 or tonumber(itemID) == 64394 or tonumber(itemID) == 64396 or tonumber(itemID) == 64395 or tonumber(itemID) == 64397) and GetTime() - spamSound >= 10 then
-				local x = random(0, #soundFiles-1)
+				local x = math.random(1, #soundFiles)
 				spamSound = GetTime()
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile(soundFiles[x], "Master")
