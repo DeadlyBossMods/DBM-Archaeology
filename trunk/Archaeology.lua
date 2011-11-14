@@ -111,9 +111,9 @@ do
 			--"<12.5> [MONSTER_WHISPER] CHAT_MSG_MONSTER_WHISPER#Do you dream while you sleep or is it an escape from the horrors of reality?#Puzzle Box of Yogg-Saron###Omegal##0#0##0#235##0#false", -- [3]
 			if spellName == GetSpellInfo(91756) then--Puzzle box, currently i haven't found any good way to detect it's usage yet. :(
 				if DBM.Options.UseMasterVolume then
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav", "Master")
+					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav", "Master")
 				else
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav")
+					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav")
 				end
 			end
 		end
