@@ -54,7 +54,6 @@ do
 	DBM:RegisterOnGuiLoadCallback(creategui, 19)
 end
 
-
 do
 	function addDefaultOptions(t1, t2)
 		for i, v in pairs(t2) do
@@ -121,4 +120,3 @@ do
 	end)
 	mainframe:RegisterEvent("ADDON_LOADED")
 end
-
