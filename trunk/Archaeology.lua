@@ -106,10 +106,11 @@ do
 				end
 			end
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
+			local unitId = select(1, ...)
 			local spellName = select(2, ...)
 			--"<2.5> [CAST_SUCCEEDED] Omegal:Possible Target<Jamie Crester>:player:Whisper::9:91756", -- [1]
 			--"<12.5> [MONSTER_WHISPER] CHAT_MSG_MONSTER_WHISPER#Do you dream while you sleep or is it an escape from the horrors of reality?#Puzzle Box of Yogg-Saron###Omegal##0#0##0#235##0#false", -- [3]
-			if spellName == GetSpellInfo(91756) then
+			if unitId == "player" and spellName == GetSpellInfo(91756) then
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav", "Master")
 				else
