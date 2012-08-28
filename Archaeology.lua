@@ -97,7 +97,6 @@ do
 			local fromplayer = select(5, ...)
 			local toplayer = select(9, ...)
 			local spellid = select(12, ...)
---			"<2.1> [CLEU] SPELL_AURA_APPLIED#0x04000000035FAB24#Omegal#1297#0x04000000035FAB24#Omegal#1297#91754#Recieve the Blessing of the Old God#1#BUFF", -- [6]
 			if spellid == 91754 and toplayer == UnitName("Player") then
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav", "Master")
@@ -108,8 +107,6 @@ do
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
 			local unitId = select(1, ...)
 			local spellName = select(2, ...)
-			--"<2.5> [CAST_SUCCEEDED] Omegal:Possible Target<Jamie Crester>:player:Whisper::9:91756", -- [1]
-			--"<12.5> [MONSTER_WHISPER] CHAT_MSG_MONSTER_WHISPER#Do you dream while you sleep or is it an escape from the horrors of reality?#Puzzle Box of Yogg-Saron###Omegal##0#0##0#235##0#false", -- [3]
 			if unitId == "player" and spellName == GetSpellInfo(91756) then
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav", "Master")
