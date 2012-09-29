@@ -83,7 +83,7 @@ do
 		elseif settings.enabled and event == "CHAT_MSG_LOOT" then
 			local lootmsg = select(1, ...)
 			local player, itemID = lootmsg:match(L.DBM_LOOT_MSG)
-			if player and itemID and (tonumber(itemID) == 52843 or tonumber(itemID) == 63127 or tonumber(itemID) == 63128 or tonumber(itemID) == 64392 or tonumber(itemID) == 64394 or tonumber(itemID) == 64396 or tonumber(itemID) == 64395 or tonumber(itemID) == 64397) and GetTime() - spamSound >= 10 then
+			if player and itemID and (tonumber(itemID) == 52843 or tonumber(itemID) == 63127 or tonumber(itemID) == 63128 or tonumber(itemID) == 64392 or tonumber(itemID) == 64394 or tonumber(itemID) == 64396 or tonumber(itemID) == 64395 or tonumber(itemID) == 64397 or tonumber(itemID) == 79869 or tonumber(itemID) == 79868) and GetTime() - spamSound >= 10 then
 				local x = math.random(1, #soundFiles)
 				spamSound = GetTime()
 				if DBM.Options.UseMasterVolume then
