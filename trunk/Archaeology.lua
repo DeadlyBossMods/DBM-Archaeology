@@ -7,6 +7,8 @@ local settings = default_settings
 
 local L = DBM_Archaeology_Translations
 
+local playerName = UnitName("player")
+
 local soundFiles = {
 	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
 	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
@@ -97,7 +99,7 @@ do
 			local fromplayer = select(5, ...)
 			local toplayer = select(9, ...)
 			local spellid = select(12, ...)
-			if spellid == 91754 and toplayer == UnitName("Player") then
+			if spellid == 91754 and toplayer == playerName then
 				if DBM.Options.UseMasterVolume then
 					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav", "Master")
 				else
