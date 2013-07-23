@@ -7,7 +7,8 @@ local settings = default_settings
 
 local L = DBM_Archaeology_Translations
 
-local playerName = UnitName("player")
+local IsInInstance = IsInInstance
+local mRandom = math.random
 
 local soundFiles = {
 	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.wav",
@@ -32,6 +33,14 @@ local soundFiles = {
 	"Sound\\Creature\\CThun\\YourHeartWill.wav",
 	"Sound\\Creature\\CThun\\YouAreWeak.wav"
 }
+
+local function PlayArchSound(file)
+	if DBM.Options.UseMasterVolume then
+		PlaySoundFile(file, "Master")
+	else
+		PlaySoundFile(file)
+	end
+end
 
 -- functions
 local addDefaultOptions
@@ -67,54 +76,32 @@ do
 		end
 	end
 
-
 	local mainframe = CreateFrame("frame", "DBM_Archaeology", UIParent)
-	local spellEvents = {
-	  ["SPELL_AURA_APPLIED"] = true,
-	}
 	local spamSound = 0
 	mainframe:SetScript("OnEvent", function(self, event, ...)
 		if event == "ADDON_LOADED" and select(1, ...) == "DBM-Archaeology" then
 			self:RegisterEvent("CHAT_MSG_LOOT")
-			self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-			self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+			self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "player")
 			-- Update settings of this Addon
 			settings = DBM_Archaeology_Settings
 			addDefaultOptions(settings, default_settings)
 
 		elseif settings.enabled and event == "CHAT_MSG_LOOT" then
+			if IsInInstance() then return end--There are no keystones in dungeons/raids so save cpu
 			local lootmsg = select(1, ...)
 			local player, itemID = lootmsg:match(L.DBM_LOOT_MSG)
 			if player and itemID and (tonumber(itemID) == 52843 or tonumber(itemID) == 63127 or tonumber(itemID) == 63128 or tonumber(itemID) == 64392 or tonumber(itemID) == 64394 or tonumber(itemID) == 64396 or tonumber(itemID) == 64395 or tonumber(itemID) == 64397 or tonumber(itemID) == 79869 or tonumber(itemID) == 79868 or tonumber(itemID) == 95373) and GetTime() - spamSound >= 10 then
-				local x = math.random(1, #soundFiles)
+				local x = mRandom(1, #soundFiles)
 				spamSound = GetTime()
-				if DBM.Options.UseMasterVolume then
-					PlaySoundFile(soundFiles[x], "Master")
-				else
-					PlaySoundFile(soundFiles[x])
-				end
+				PlayArchSound(soundFiles[x])
 			end
 
-		elseif settings.enabled and event == "COMBAT_LOG_EVENT_UNFILTERED" and spellEvents[select(2, ...)] then
-			local fromplayer = select(5, ...)
-			local toplayer = select(9, ...)
-			local spellid = select(12, ...)
-			if spellid == 91754 and toplayer == playerName then
-				if DBM.Options.UseMasterVolume then
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav", "Master")
-				else
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav")
-				end
-			end
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
-			local unitId = select(1, ...)
-			local spellName = select(2, ...)
-			if unitId == "player" and spellName == GetSpellInfo(91756) then
-				if DBM.Options.UseMasterVolume then
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav", "Master")
-				else
-					PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav")
-				end
+			local spellId = select(5, ...)
+			if spellId == 91756 then--Puzzle Box of Yogg-Saron
+				PlayArchSound("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.wav")
+			elseif spellId == 91754 then--Blessing of the Old God
+				PlayArchSound("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.wav")
 			end
 		end
 	end)
