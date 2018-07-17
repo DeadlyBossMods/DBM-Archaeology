@@ -97,7 +97,7 @@ do
 			end
 
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
-			local spellId = select(5, ...)
+			local spellId = select(3, ...)
 			if spellId == 91756 then--Puzzle Box of Yogg-Saron
 				PlayArchSound("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg")
 			elseif spellId == 91754 then--Blessing of the Old God
