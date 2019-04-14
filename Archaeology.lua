@@ -1,4 +1,4 @@
-local Revision = ("$Revision$"):sub(12, -3)
+local Revision = string.sub("@file-date-integer@", 1, -5)
 
 local default_settings = {
 	enabled = true,}
