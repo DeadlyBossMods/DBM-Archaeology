@@ -1,4 +1,4 @@
-local Revision = string.sub("@file-date-integer@", 1, -5)
+local Revision = "@file-date-integer@"
 
 local default_settings = {
 	enabled = true,}
