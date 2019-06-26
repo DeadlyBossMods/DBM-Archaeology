@@ -11,27 +11,26 @@ local IsInInstance = IsInInstance
 local mRandom = math.random
 
 local soundFiles = {
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.ogg",
-	"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.ogg",
-	"Sound\\Creature\\CThun\\CThunDeathIsClose.ogg",
-	"Sound\\Creature\\CThun\\CThunYouAreAlready.ogg",
-	"Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
-	"Sound\\Creature\\CThun\\CThunYouWillDIe.ogg",
-	"Sound\\Creature\\CThun\\CThunYourCourage.ogg",
-	"Sound\\Creature\\CThun\\CThunYourFriends.ogg",
-	"Sound\\Creature\\CThun\\YourHeartWill.ogg",
-	"Sound\\Creature\\CThun\\YouAreWeak.ogg"
+	14376,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.ogg"
+	14377,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.ogg",
+	14378,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.ogg",
+	14379,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.ogg",
+	14380,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.ogg",
+	14381,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.ogg",
+	14382,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.ogg",
+	14383,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.ogg",
+	14372,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.ogg",
+	14373,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.ogg",
+	14374,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.ogg",
+	14375,--"Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.ogg",
+	8580,--"Sound\\Creature\\CThun\\CThunDeathIsClose.ogg",
+	8581,--"Sound\\Creature\\CThun\\CThunYouAreAlready.ogg",
+	8582,--"Sound\\Creature\\CThun\\CThunYourCourage.ogg",
+	8583,--"Sound\\Creature\\CThun\\CThunYourFriends.ogg",
+	8584,--"Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
+	8585,--"Sound\\Creature\\CThun\\CThunYouWillDIe.ogg",
+	8586,--"Sound\\Creature\\CThun\\YouAreWeak.ogg"
+	8587,--"Sound\\Creature\\CThun\\YourHeartWill.ogg",
 }
 
 -- functions
@@ -107,15 +106,15 @@ do
 			if player and itemID and itemIds[tonumber(itemID)] and GetTime() - spamSound >= 10 then
 				local x = mRandom(1, #soundFiles)
 				spamSound = GetTime()
-				DBM:PlaySoundFile(soundFiles[x])
+				DBM:PlaySound(soundFiles[x])
 			end
 
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
 			local spellId = select(3, ...)
 			if spellId == 91756 then--Puzzle Box of Yogg-Saron
-				DBM:PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg")
+				DBM:PlaySound(15757)--"Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg"
 			elseif spellId == 91754 then--Blessing of the Old God
-				DBM:PlaySoundFile("Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.ogg")
+				DBM:PlaySound(15759)--"Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.ogg"
 			end
 		end
 	end)
