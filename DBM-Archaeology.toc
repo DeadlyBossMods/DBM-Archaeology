@@ -6,8 +6,10 @@
 ## RequiredDeps: DBM-Core
 ## DefaultState: enabled
 ## Author: Omega
-## URL: http://www.deadlybossmods.com
+## X-Website: http://www.deadlybossmods.com
 ## SavedVariables: DBM_Archaeology_Settings
+## X-Curse-Project-ID: 29493
+
 localization.en.lua
 localization.cn.lua
 localization.de.lua
