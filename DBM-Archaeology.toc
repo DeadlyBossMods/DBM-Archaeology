@@ -9,6 +9,7 @@
 ## X-Website: http://www.deadlybossmods.com
 ## SavedVariables: DBM_Archaeology_Settings
 ## X-Curse-Project-ID: 29493
+## Version: @project-version@
 
 localization.en.lua
 localization.cn.lua
