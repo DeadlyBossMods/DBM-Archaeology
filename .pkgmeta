@@ -1,1 +1,5 @@
 package-as: DBM-Archaeology
+enable-nolib-creation: no
+
+move-folders:
+	DBM-Archaeology/DBM-Archaeology: DBM-Archaeology
