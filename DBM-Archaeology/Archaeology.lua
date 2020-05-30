@@ -40,7 +40,7 @@ DBM:RegisterOnGuiLoadCallback(function()
 	version:SetPoint("BOTTOMRIGHT", area.frame, "BOTTOMRIGHT", -5, 5)
 
 	generalarea:AutoSetDimension()
-end), 19)
+end, 19)
 
 do
 	local IsInInstance = IsInInstance
