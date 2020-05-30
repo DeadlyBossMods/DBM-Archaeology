@@ -40,7 +40,6 @@ DBM:RegisterOnGuiLoadCallback(function()
 	version:SetPoint("BOTTOMRIGHT", area.frame, "BOTTOMRIGHT", -5, 5)
 
 	generalarea:AutoSetDimension()
-end
 end), 19)
 
 do
