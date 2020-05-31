@@ -39,7 +39,13 @@ globals = {
 	"DBM_Archaeology_Translations",
 
 	-- WoW
+	"GameFontDisableSmall",
+	"GameFontHighlightSmall",
+	"GameFontNormalSmall",
+	"UIParent",
 
 	-- FrameXML
+	"CreateFrame",
 	"IsInInstance",
+	"GetLocale",
 }
