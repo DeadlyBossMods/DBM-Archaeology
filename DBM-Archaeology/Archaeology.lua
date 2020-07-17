@@ -38,8 +38,6 @@ DBM:RegisterOnGuiLoadCallback(function()
 
 	local version = generalarea:CreateText("r@file-date-integer@", nil, nil, GameFontDisableSmall, "RIGHT")
 	version:SetPoint("BOTTOMRIGHT", generalarea.frame, "BOTTOMRIGHT", -5, 5)
-
-	generalarea:AutoSetDimension()
 end, 19)
 
 do
