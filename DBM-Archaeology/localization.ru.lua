@@ -3,7 +3,7 @@ if GetLocale() ~= "ruRU" then
 end
 local L = DBM_Archaeology_Translations
 
-L.TabCategory_Archaeology	= "археология"--Translate?
-L.AreaGeneral 				= "Archaeology Settings"--Translate
-L.Enable					= "Enable Archaeology"--Translate
-L.DBM_LOOT_MSG				= "([^%s]+).*Hitem:(%d+)"--Translate?
+L.TabCategory_Archaeology	= "Археология"
+L.AreaGeneral 				= "Настройки археологии"
+L.Enable					= "Включить археологию"
+L.DBM_LOOT_MSG				= "([^%s]+).*Hitem:(%d+)"
