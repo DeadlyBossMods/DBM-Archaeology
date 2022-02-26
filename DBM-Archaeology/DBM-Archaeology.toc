@@ -1,7 +1,9 @@
 ## Interface: 90200
 ## X-Min-Interface: 70100
 ## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff0055FFArchaeology|r
+## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff0055FFАрхеология|r
 ## Notes: Gives archaeology a little more flavor
+## Notes-ruRU: Придает археологии дополнительный колорит
 ## LoadOnDemand: 0
 ## RequiredDeps: DBM-Core
 ## DefaultState: enabled
