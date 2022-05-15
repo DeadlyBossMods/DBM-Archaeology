@@ -35,9 +35,6 @@ DBM:RegisterOnGuiLoadCallback(function()
 	local enabled = generalarea:CreateCheckButton(L.Enable, true)
 	enabled:SetScript("OnShow", function(self) self:SetChecked(settings.enabled) end)
 	enabled:SetScript("OnClick", function(self) settings.enabled = not not self:GetChecked() end)
-
-	local version = generalarea:CreateText("r@file-date-integer@", nil, nil, GameFontDisableSmall, "RIGHT")
-	version:SetPoint("BOTTOMRIGHT", generalarea.frame, "BOTTOMRIGHT", -5, 5)
 end, 19)
 
 do
