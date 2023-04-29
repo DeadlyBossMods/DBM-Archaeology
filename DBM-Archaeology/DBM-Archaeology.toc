@@ -10,6 +10,7 @@
 ## Author: Omega
 ## X-Website: http://www.deadlybossmods.com
 ## SavedVariables: DBM_Archaeology_Settings
+## IconTexture: Interface\AddOns\DBM-Core\textures\dbm_airhorn
 ## X-Curse-Project-ID: 29493
 ## Version: @project-version@
 
