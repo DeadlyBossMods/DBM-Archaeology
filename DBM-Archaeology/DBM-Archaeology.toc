@@ -1,7 +1,7 @@
 ## Interface: 100105
 ## X-Min-Interface: 70100
-## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff0055FFArchaeology|r
-## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff0055FFАрхеология|r
+## Title:|cffffe00a<|r|cffff7d0aDBM Extra|r|cffffe00a>|r |cfff69ccf0Archaeology|r
+## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM Extra|r|cffffe00a>|r |cff69ccf0Археология|r
 ## Notes: Gives archaeology a little more flavor
 ## Notes-ruRU: Придает археологии дополнительный колорит
 ## LoadOnDemand: 0
