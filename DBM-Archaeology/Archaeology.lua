@@ -20,12 +20,14 @@ local soundFiles = {
 	564823, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.ogg",
 	546627, -- "Sound\\Creature\\CThun\\CThunDeathIsClose.ogg",
 	546621, -- "Sound\\Creature\\CThun\\CThunYouAreAlready.ogg",
-	546626, -- "Sound\\Creature\\CThun\\CThunYourCourage.ogg",
-	546620, -- "Sound\\Creature\\CThun\\CThunYourFriends.ogg",
-	546623, -- "Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
-	546633, -- "Sound\\Creature\\CThun\\CThunYouWillDie.ogg",
-	546636, -- "Sound\\Creature\\CThun\\YouAreWeak.ogg"
-	546628, -- "Sound\\Creature\\CThun\\YourHeartWill.ogg",
+
+	-- Cannot seem to get sound to play with the following FDID's
+	--546626, -- "Sound\\Creature\\CThun\\CThunYourCourage.ogg",
+	--546620, -- "Sound\\Creature\\CThun\\CThunYourFriends.ogg",
+	--546623, -- "Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
+	--546633, -- "Sound\\Creature\\CThun\\CThunYouWillDie.ogg",
+	--546636, -- "Sound\\Creature\\CThun\\YouAreWeak.ogg"
+	--546628, -- "Sound\\Creature\\CThun\\YourHeartWill.ogg",
 }
 
 DBM:RegisterOnGuiLoadCallback(function()
