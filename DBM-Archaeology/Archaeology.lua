@@ -6,26 +6,26 @@ local settings = {
 local L = DBM_Archaeology_Translations
 
 local soundFiles = {
-	14376, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.ogg"
-	14377, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.ogg",
-	14378, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.ogg",
-	14379, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.ogg",
-	14380, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.ogg",
-	14381, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.ogg",
-	14382, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.ogg",
-	14383, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.ogg",
-	14372, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.ogg",
-	14373, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.ogg",
-	14374, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.ogg",
-	14375, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.ogg",
-	8580, -- "Sound\\Creature\\CThun\\CThunDeathIsClose.ogg",
-	8581, -- "Sound\\Creature\\CThun\\CThunYouAreAlready.ogg",
-	8582, -- "Sound\\Creature\\CThun\\CThunYourCourage.ogg",
-	8583, -- "Sound\\Creature\\CThun\\CThunYourFriends.ogg",
-	8584, -- "Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
-	8585, -- "Sound\\Creature\\CThun\\CThunYouWillDIe.ogg",
-	8586, -- "Sound\\Creature\\CThun\\YouAreWeak.ogg"
-	8587, -- "Sound\\Creature\\CThun\\YourHeartWill.ogg",
+	564858, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper01.ogg"
+	564838, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper02.ogg",
+	564877, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper03.ogg",
+	564865, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper04.ogg",
+	564834, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper05.ogg",
+	564862, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper06.ogg",
+	564868, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper07.ogg",
+	564857, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_HowlingFjordWhisper08.ogg",
+	564870, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper01.ogg",
+	564856, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper02.ogg",
+	564845, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper03.ogg",
+	564823, -- "Sound\\Creature\\YoggSaron\\AK_YoggSaron_Whisper04.ogg",
+	546627, -- "Sound\\Creature\\CThun\\CThunDeathIsClose.ogg",
+	546621, -- "Sound\\Creature\\CThun\\CThunYouAreAlready.ogg",
+	546626, -- "Sound\\Creature\\CThun\\CThunYourCourage.ogg",
+	546620, -- "Sound\\Creature\\CThun\\CThunYourFriends.ogg",
+	546623, -- "Sound\\Creature\\CThun\\CThunYouWillBetray.ogg",
+	546633, -- "Sound\\Creature\\CThun\\CThunYouWillDie.ogg",
+	546636, -- "Sound\\Creature\\CThun\\YouAreWeak.ogg"
+	546628, -- "Sound\\Creature\\CThun\\YourHeartWill.ogg",
 }
 
 DBM:RegisterOnGuiLoadCallback(function()
