@@ -87,9 +87,9 @@ do
 		elseif settings.enabled and event == "UNIT_SPELLCAST_SUCCEEDED" then
 			local spellId = select(3, ...)
 			if spellId == 91756 then -- Puzzle Box of Yogg-Saron
-				DBM:PlaySoundFile(15757) -- "Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg"
-			elseif spellId == 91754 then--Blessing of the Old God
-				DBM:PlaySoundFile(15759) -- "Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.ogg"
+				DBM:PlaySoundFile(564859) -- "Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg"
+			elseif spellId == 91754 then -- Blessing of the Old God
+				DBM:PlaySoundFile(564844) -- "Sound\\Creature\\YoggSaron\\UR_YoggSaron_Insanity01.ogg"
 			end
 		end
 	end)
