@@ -32,7 +32,7 @@ local soundFiles = {
 
 DBM:RegisterOnGuiLoadCallback(function()
 	local panel = DBM_GUI:CreateNewPanel(L.TabCategory_Archaeology, "option")
-	local generalarea = panel:CreateArea(L.AreaGeneral, nil, 100, true)
+	local generalarea = panel:CreateArea(L.AreaGeneral)
 
 	local enabled = generalarea:CreateCheckButton(L.Enable, true)
 	enabled:SetScript("OnShow", function(self) self:SetChecked(settings.enabled) end)
