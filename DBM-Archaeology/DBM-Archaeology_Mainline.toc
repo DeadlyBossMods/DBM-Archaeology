@@ -1,7 +1,7 @@
 ## Interface: 110007, 110100
 ## X-Min-Interface: 70100
 ## Category: DBM
-## Group: DBM Plugin
+
 ## Title:|cffffe00a<|r|cffff7d0aDBM Extra|r|cffffe00a>|r |cff69ccf0Archaeology|r
 ## Title-ruRU:|cffffe00a<|r|cffff7d0aDBM Дополнение|r|cffffe00a>|r |cff69ccf0Археология|r
 ## Notes: Gives archaeology a little more flavor
